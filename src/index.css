@@ -75,7 +75,7 @@ body {
 }
 
 .marquee-content {
-  display: inline-block;
+  display: inline-flex;
   animation: scroll-marquee 40s linear infinite;
 }
 

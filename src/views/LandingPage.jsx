@@ -222,7 +222,10 @@ const LandingPage = ({ setView, setIsOps }) => {
       {/* Footer / Final CTA */}
       <section className="py-24 text-center border-t border-white/5 bg-navy/50">
         <h2 className="text-3xl font-bold mb-8 italic">Ready to transform your venue?</h2>
-        <button className="px-12 py-5 rounded-full bg-white text-navy font-black text-xl hover:scale-105 transition-all shadow-xl">
+        <button 
+          onClick={() => setView('dashboard')}
+          className="px-12 py-5 rounded-full bg-white text-navy font-black text-xl hover:scale-105 transition-all shadow-xl"
+        >
           Get Started
         </button>
       </section>

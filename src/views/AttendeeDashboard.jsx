@@ -126,15 +126,27 @@ const AttendeeDashboard = ({ stats }) => {
       
       {/* Zones */}
       {/* Gate A - North (Red) */}
-      <circle cx="200" cy="40" r="15" className="fill-red-500/20 stroke-red-500 cursor-pointer hover:fill-red-500/40 transition-all" />
+      <circle 
+        cx="200" cy="40" r="15" 
+        className="fill-red-500/20 stroke-red-500 cursor-pointer hover:fill-red-500/40 transition-all" 
+        onClick={() => alert('Gate A: High density. Processing time 15m.')}
+      />
       <text x="200" y="45" textAnchor="middle" className="text-[10px] fill-white font-bold pointer-events-none">A</text>
       
       {/* Gate B - West (Yellow) */}
-      <circle cx="40" cy="150" r="15" className="fill-amber/20 stroke-amber cursor-pointer hover:fill-amber/40 transition-all" />
+      <circle 
+        cx="40" cy="150" r="15" 
+        className="fill-amber/20 stroke-amber cursor-pointer hover:fill-amber/40 transition-all" 
+        onClick={() => alert('Gate B: Moderate density. Processing time 5m.')}
+      />
       <text x="40" y="155" textAnchor="middle" className="text-[10px] fill-white font-bold pointer-events-none">B</text>
       
       {/* Gate C - East (Green) */}
-      <circle cx="360" cy="150" r="15" className="fill-teal/20 stroke-teal cursor-pointer hover:fill-teal/40 transition-all" />
+      <circle 
+        cx="360" cy="150" r="15" 
+        className="fill-teal/20 stroke-teal cursor-pointer hover:fill-teal/40 transition-all" 
+        onClick={() => alert('Gate C: Low density. Processing time 2m. Recommended.')}
+      />
       <text x="360" y="155" textAnchor="middle" className="text-[10px] fill-white font-bold pointer-events-none">C</text>
 
       {/* Areas */}
@@ -340,7 +352,12 @@ const AttendeeDashboard = ({ stats }) => {
                           <div className="text-[10px] text-teal uppercase font-bold animate-pulse">Online Assistant</div>
                        </div>
                     </div>
-                    <button className="p-2 hover:bg-white/5 rounded-full"><Trash2 className="w-4 h-4 text-white/20"/></button>
+                    <button 
+                      onClick={() => setMessages([{ role: 'assistant', text: "Chat cleared. How can I help you today?" }])}
+                      className="p-2 hover:bg-white/5 rounded-full"
+                    >
+                      <Trash2 className="w-4 h-4 text-white/20"/>
+                    </button>
                  </div>
 
                  <div className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-hide">

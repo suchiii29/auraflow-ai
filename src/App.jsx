@@ -4,6 +4,8 @@ import BottomNav from './components/BottomNav';
 import LandingPage from './views/LandingPage';
 import AttendeeDashboard from './views/AttendeeDashboard';
 import OpsCommandCenter from './views/OpsCommandCenter';
+import SafetyView from './views/SafetyView';
+import AmenitiesView from './views/AmenitiesView';
 import { useSimulatedData } from './hooks/useSimulatedData';
 import { AnimatePresence, motion } from 'framer-motion';
 
@@ -23,6 +25,10 @@ function App() {
         return <LandingPage setView={setView} setIsOps={setIsOps} />;
       case 'dashboard':
         return <AttendeeDashboard stats={stats} activeTab={activeTab} setActiveTab={setActiveTab} />;
+      case 'safety':
+        return <SafetyView />;
+      case 'amenities':
+        return <AmenitiesView />;
       default:
         return <LandingPage setView={setView} setIsOps={setIsOps} />;
     }
